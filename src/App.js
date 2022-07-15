@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react';
 import Player from "./components/Player";
 function App() {
-  const[songs, setSongs] = useState([
+  const[songs] = useState([
    {
     title:"Buga",
     artist: "Kizz Daniel Ft Tekno",
@@ -39,7 +39,7 @@ function App() {
         return currentSongIndex + 1;
       }
     });
-  }, [currentSongIndex]);
+  }, [currentSongIndex, songs.length]);
   return (
     <div className="App">
       <Player
